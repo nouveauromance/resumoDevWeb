@@ -1,0 +1,94 @@
+🧠 Roteirinho Mental 
+
+📦 1. Callback, Promises, Async/Await – o trio da assíncronia
+
+👉 “Isso demora?” → então precisa de uma dessas 3 soluções:
+
+Situação: Vai demorar e quero fazer depois?	
+Solução: Callback	
+Exemplo rápido:	minhaFuncao(() => { console.log("Feito!"); })		
+Dica mental: Pensa em ligar pra alguém depois
+
+Situação: Quero mais controle sobre o tempo?
+Solução: Promise
+Exemplo rápido: fetch('url').then(res => res.json()).catch(err => ...)	
+Dica mental: Pensa em promessa de entregar algo
+
+Situação: Quero escrever de forma mais limpa?
+Solução: Async/Await	
+Exemplo rápido: Async/Await	const res = await fetch('url')
+Dica mental: Como se fosse sincronia falsa
+
+🔁 Dica visual:
+
+js
+Copiar
+Editar
+// Async/Await
+async function pegarDados() {
+  try {
+    const resposta = await fetch("url");
+    const dados = await resposta.json();
+    console.log(dados);
+  } catch (erro) {
+    console.log("Deu ruim:", erro);
+  }
+}
+
+🔧 2. Node.js + Express – servidor web
+
+🧠 Pensa:
+. “Quero criar uma porta para o navegador conversar com o servidor.”
+. Express é tipo o “atendente simpático” que responde as rotas.
+
+js
+Copiar
+Editar
+const express = require("express");
+const app = express();
+const PORT = 3000;
+
+app.get("/", (req, res) => {
+  res.send("Oi Natali, você chegou no servidor!");
+});
+
+app.listen(PORT, () => {
+  console.log(`Servidor rodando na porta ${PORT}`);
+});
+
+✔️ Dicas mentais:
+
+. get() → rota de consulta
+. post() → envio de dados
+. req = o que o usuário manda
+. res = o que você responde
+
+🧪 3. JSON e comunicação web
+
+🧠 Lembra:
+. JSON é o idioma universal entre front e back
+. Sempre em string, sempre em pares chave:valor
+
+js
+Copiar
+Editar
+const dados = {
+  nome: "Natali",
+  idade: 18
+};
+
+const jsonString = JSON.stringify(dados); // transforma em texto
+const objetoDeNovo = JSON.parse(jsonString); // volta pra objeto
+
+✔️ Macete mental:
+"Se quero mandar pro servidor → JSON.stringify()
+Se recebi do servidor → JSON.parse()"
+
+⚠️ Extras que caem muito:
+module.exports = algo → exportar módulo no Node
+
+require('caminho') → importar módulo
+
+npm init → iniciar projeto Node
+
+npm install express → instalar Express
