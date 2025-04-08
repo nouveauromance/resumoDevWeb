@@ -16,7 +16,7 @@ Web: o conteúdo que você acessa (sites, páginas, apps).
 📌 Princípios Básicos da Web:
 . Cliente/Servidor: Seu navegador é o cliente. Ele faz pedidos (requisições) para um servidor, que responde com o conteúdo.
 . HTML, CSS e JS: Linguagens da web. HTML estrutura, CSS estiliza, JavaScript dá vida.
-. HTTP/HTTPS: Protocolo de comunicação (explicaremos mais no tópico 3).
+. HTTP/HTTPS: Protocolo de comunicação.
 . URL: Endereço único de cada página.
 
 ✨ Memorização:
