@@ -1,0 +1,39 @@
+📚 FLASHCARDS JS / NODE / EXPRESS
+
+🃏 1. O que é o Node.js?
+💡 Uma plataforma que permite rodar JavaScript no servidor (fora do navegador).
+
+🃏 2. Para que serve o Express no Node.js?
+💡 É um framework que simplifica a criação de servidores e rotas HTTP.
+
+🃏 3. O que é um endpoint?
+💡 Um caminho definido no servidor que responde a uma requisição HTTP.
+
+🃏 4. Qual a diferença entre GET e POST?
+🔹 GET: busca informações
+🔹 POST: envia dados para serem processados
+
+🃏 5. O que é JSON?
+💡 É um formato de troca de dados leve e legível por humanos e máquinas. (JavaScript Object Notation)
+
+🃏 6. O que é um callback?
+💡 Uma função passada como argumento para outra função, que será executada depois de algo acontecer.
+
+🃏 7. O que é uma Promise?
+💡 Um objeto que representa um valor que pode estar disponível agora, no futuro ou nunca (pendente, resolvida ou rejeitada).
+
+🃏 8. Diferença entre .then() e async/await?
+🔹 .then(): encadeia ações com promessas
+🔹 async/await: faz parecer código síncrono, mas lida com promessas por trás
+
+🃏 9. Como criar um servidor básico com Express?
+js
+Copiar
+Editar
+const express = require("express");
+const app = express();
+app.get("/", (req, res) => res.send("Oi!"));
+app.listen(3000);
+
+🃏 10. O que é o body-parser ou express.json()?
+💡 Middleware que transforma o corpo da requisição (JSON) em um objeto JS.
