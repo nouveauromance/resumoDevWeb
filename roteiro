@@ -21,9 +21,6 @@ Dica mental: Como se fosse sincronia falsa
 
 🔁 Dica visual:
 
-js
-Copiar
-Editar
 // Async/Await
 async function pegarDados() {
   try {
@@ -41,9 +38,6 @@ async function pegarDados() {
 . “Quero criar uma porta para o navegador conversar com o servidor.”
 . Express é tipo o “atendente simpático” que responde as rotas.
 
-js
-Copiar
-Editar
 const express = require("express");
 const app = express();
 const PORT = 3000;
@@ -69,9 +63,6 @@ app.listen(PORT, () => {
 . JSON é o idioma universal entre front e back
 . Sempre em string, sempre em pares chave:valor
 
-js
-Copiar
-Editar
 const dados = {
   nome: "Natali",
   idade: 18
