@@ -1,0 +1,273 @@
+!! Introdução (evolução da Web, princípios básicos)
+
+🧠 O que é a Web?
+A Web (World Wide Web) é tipo uma "teia" de páginas conectadas entre si. É o que você acessa no navegador (Chrome, Firefox...) quando digita um site.
+
+📍 Diferença entre Web e Internet:
+Internet: a estrutura física (cabos, servidores, redes).
+Web: o conteúdo que você acessa (sites, páginas, apps).
+
+📈 Evolução da Web:
+. Web 1.0: Estática, só leitura, sem interação.	Sites antigos de notícias, tipo enciclopédias online.
+. Web 2.0: Interativa, redes sociais, o usuário participa.YouTube, Facebook, Twitter.
+. Web 2.5: Foco em dispositivos móveis.	Sites que se adaptam ao celular, PWAs.
+. Web 3.0: Inteligente e descentralizada. Blockchain, IA, metaverso, criptomoedas.
+
+📌 Princípios Básicos da Web:
+. Cliente/Servidor: Seu navegador é o cliente. Ele faz pedidos (requisições) para um servidor, que responde com o conteúdo.
+. HTML, CSS e JS: Linguagens da web. HTML estrutura, CSS estiliza, JavaScript dá vida.
+. HTTP/HTTPS: Protocolo de comunicação (explicaremos mais no tópico 3).
+. URL: Endereço único de cada página.
+
+✨ Memorização:
+Pensar na Web como um restaurante
+. Você (cliente) faz o pedido (requisição).
+. O garçom (navegador) leva até a cozinha (servidor).
+. A cozinha prepara e envia a comida (resposta: página HTML, CSS, etc).
+
+!! Versionamento com Git, GitHub e GitLab
+
+🧾 O que é o Git?
+Git é um sistema de versionamento de código.
+Tipo uma máquina do tempo dos seus arquivos (guarda tudo que você muda, então dá pra voltar atrás, 
+comparar versões e trabalhar em equipe sem bagunça).
+
+💡 Metáfora:
+Você está escrevendo um livro com amigos. O Git é tipo um caderno com todas as versões do texto, 
+e todo mundo escreve nele com canetas coloridas (pra saber quem fez o quê).
+
+🔁 Conceitos-chave:
+Repositório (repo) - Pasta onde o Git guarda seu projeto com histórico.
+. Commit - Um "salvamento" com mensagem explicando a alteração.
+. Branch - Ramificação pra testar ou criar novas versões sem afetar o código principal.
+. Merge - Unir duas branches. Ex: juntar um novo recurso com o código principal.
+. Clone - Baixar uma cópia de um repositório.
+. Push / Pull -	Push (enviar pro repositório online), Pull (trazer atualizações de lá).
+
+🌐 GitHub e GitLab:
+São plataformas online onde você hospeda seus repositórios Git.
+. GitHub: Mais popular no mundo. Foco em código aberto e comunidade.
+. GitLab: Também é muito usado, com mais opções de automações (CI/CD) de forma gratuita.
+
+🔑 Git é o motor, GitHub/GitLab são os carros que usam ele pra rodar por aí.
+
+🚀 Ciclo básico de uso:
+# Cria um repositório Git
+git init
+
+# Adiciona os arquivos para versionamento
+git add .
+
+# Cria um commit com mensagem
+git commit -m "primeiro commit"
+
+# Conecta ao GitHub
+git remote add origin https://github.com/usuario/repositorio.git
+
+# Envia pro repositório online
+git push -u origin main
+
+✨ Dica de Memorização:
+Git é o caderno de anotações inteligente, e GitHub é a nuvem onde você guarda tudo e compartilha com o mundo.
+
+!! Fundamentos e Protocolos de Serviços Web
+
+🌐 O que é a Web?
+A Web é o que usamos pra acessar sites, apps online, APIs... É baseada em:
+. Servidores (onde os sites moram).
+. Clientes (navegadores, apps... a gente que acessa).
+. Protocolos (as regrinhas de como os dois conversam).
+
+📡 HTTP – O Protocolo da Web:
+HTTP (HyperText Transfer Protocol) é o protocolo usado pra trocar informações entre cliente e servidor.
+
+🔤 Métodos HTTP:
+São os tipos de pedidos que um cliente pode fazer:
+. GET -	Buscar dados (ex: ver um post)
+. POST - Enviar dados (ex: criar um post)
+. PUT - Atualizar dados inteiros
+. PATCH - Atualizar parcialmente
+. DELETE - Deletar dados
+
+📦 O que é um Web Service?
+Um web service é um serviço disponível na internet que recebe e envia dados, normalmente em JSON ou XML.
+
+🔧 Ele funciona com requisições HTTP e responde com dados.
+
+💬 JSON – O formato mais usado da Web:
+JSON (JavaScript Object Notation) é a forma mais comum de enviar e receber dados entre frontend e backend.
+
+{
+  "nome": "Natali",
+  "estudos": "Desenvolvimento Web III"
+}
+
+📘 APIs (Application Programming Interfaces):
+São os "cardápios" de um sistema — dizem quais dados você pode pedir e como pedir.
+
+!! Node.js – JavaScript no Backend
+
+💡 O que é o Node.js?
+É um runtime que permite rodar JavaScript fora do navegador, ou seja, no servidor.
+
+🛠️ Ele é baseado no V8, o mesmo motor de JS do Google Chrome.
+
+💡 Com o Node.js dá pra:
+. Criar servidores web. 
+. Conectar com banco de dados. 
+. Criar APIs. 
+. Automatizar tarefas.
+
+🧬 Características do Node.js:
+. Assíncrono - Executa várias coisas ao mesmo tempo sem travar.
+. Orientado a eventos - Reage a coisas que acontecem (tipo cliques, respostas de servidor).
+. Leve e rápido	- Por usar o V8 e não criar múltiplas threads.
+
+📦 Gerenciador de pacotes – npm:
+O npm (Node Package Manager) é tipo a Play Store do Node.
+
+💡 Com ele você pode:
+. Instalar pacotes (npm install express).
+. Rodar scripts (npm run dev).
+. Gerenciar dependências do projeto (package.json).
+
+🏗️ Criando um projeto Node do zero:
+// Criar e rodar pasta do projeto
+mkdir resumo
+cd resumo
+
+// Inicializar com npm
+npm init -y
+
+// Criar o arquivo principal
+touch index.js
+
+// Executar
+node index.js
+
+🧪 Exemplo simples de servidor com Node usando framework (Express.js):
+npm install express
+
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
+app.listen(3000, () => {
+  console.log('Servidor Express rodando.');
+});
+
+!! Web Services com Node.js e JSON
+
+🧠 O que são Web Services?
+São serviços acessíveis pela web que permitem que sistemas diferentes se comuniquem entre si.
+Geralmente, são APIs (Application Programming Interfaces) que recebem requisições e devolvem respostas.
+
+💬 Qual é o formato mais usado?
+JSON (JavaScript Object Notation): leve, fácil de ler e trabalhar.
+
+💬 Exemplo de um JSON:
+
+{
+  "nome": "Natali",
+  "idade": 18,
+  "faDe": "TXT"
+}
+
+📡 Criando uma API REST simples com Node.js + Express:
+
+const express = require('express');
+const app = express();
+
+app.use(express.json());
+
+const usuarios = [
+  { id: 1, nome: "Beomgyu", idade: "24" },
+  { id: 2, nome: "Huening Kai", idade: "22" }
+];
+
+app.get('/usuarios', (req, res) => {
+  res.json(usuarios);
+});
+
+app.post('/usuarios', (req, res) => {
+  const novoUsuario = req.body;
+  usuarios.push(novoUsuario);
+  res.status(201).json(novoUsuario);
+});
+
+app.listen(3000, () => {
+  console.log('API rodando em http://localhost:3000');
+});
+
+🛠️ Verbos HTTP + Rotas REST:
+. GET	- Buscar dados
+. POST - Criar dados
+. PUT - Atualizar dados
+. DELETE - Apagar dados
+
+🧪 Teste essas rotas no Postman:
+. GET /usuarios → ver todos os dados
+. POST /usuarios → enviar novo JSON
+
+{
+  "id": 3,
+  "nome": "Beomgyu é meu favorito.",
+  "favorito": "Beomgyu"
+}
+
+!! Promises, Callbacks, Async e Await
+
+🧠 Esses quatro conceitos são formas de lidar com código assíncrono no JavaScript — ou seja, código que não 
+espera uma tarefa terminar pra continuar rodando. Isso é essencial pra coisas como chamadas de API, leitura de arquivos, etc.
+
+🔁 Callbacks:
+Um callback é  uma função passada como argumento para outra função, que será executada quando a tarefa terminar.
+
+function pegarDados(callback) {
+  setTimeout(() => {
+    callback("Dados recebidos.");
+  }, 1000);
+}
+
+pegarDados((mensagem) => {
+  console.log(mensagem); // "Dados recebidos."
+});
+
+Problemas: quando você aninha muitos callbacks, surge o famoso “callback hell”, que torna o código difícil de ler e manter.
+
+🌀 Promises:
+Uma Promise representa uma operação assíncrona que pode estar:
+. pending (pendente)
+. fulfilled (realizada com sucesso)
+. rejected (falhou)
+
+const promessa = new Promise((resolve, reject) => {
+  let sucesso = true;
+  if (sucesso) {
+    resolve("Deu certo.");
+  } else {
+    reject("Deu ruim.");
+  }
+});
+
+promessa
+  .then((mensagem) => console.log(mensagem))
+  .catch((erro) => console.error(erro));
+
+⏳ Async/Await:
+Forma moderna e mais legível de lidar com Promises. async transforma uma função em algo que retorna uma Promise. 
+await faz o código “esperar” pela resolução da Promise.
+
+async function pegarMensagem() {
+  try {
+    const resposta = await promessa;
+    console.log(resposta);
+  } catch (erro) {
+    console.error(erro);
+  }
+}
+
+pegarMensagem();
