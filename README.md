@@ -2,12 +2,12 @@
 
 🧠 Um mini guia mental sobre os tópicos de **Node.js**, **Express**, **JSON** e **Assíncronos** (callbacks, promises, async/await).
 
-## Índice:
+## Índices (ordem de revisão):
 
-- [Callback, Promises e Async/Await](#1-callback-promises-e-asyncawait)
-- [Servidor com Node.js e Express](#2-servidor-com-nodejs-e-express)
-- [JSON e Comunicação Web](#3-json-e-comunicação-web)
-- [Extras Úteis](#4-extras-úteis)
+- [Resumo](#1-resumo)
+- [Roteiro](#2-roteiro)
+- [Flashcards](#3-flashcards)
+- [Exercícios](#4-exercícios)
 
 ## Autores
 
